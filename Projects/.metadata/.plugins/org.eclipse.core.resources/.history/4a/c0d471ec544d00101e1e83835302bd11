@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">perfil</title>
+</head>
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<span th:text="${usuarios.nombre}"></span>
+	<span th:text="${usuarios.apellidos}"></span>
+</body>
+</html>

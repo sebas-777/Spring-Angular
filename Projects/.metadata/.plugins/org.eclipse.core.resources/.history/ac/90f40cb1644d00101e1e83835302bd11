@@ -1,0 +1,32 @@
+package com.tutorial.springboot.web.app.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tutorial.springboot.web.app.models.Usuarios;
+
+
+@Controller
+@RequestMapping("/app")
+public class IndexController { 
+	
+	@GetMapping({"/index","/home"})
+	public String index(Model model){
+		model.addAttribute("titulo","Hola pendejos");
+		return "index";
+	}
+	
+	@RequestMapping("/perfil")
+	public String perfil(Model model) {
+		Usuarios usuarios = new Usuarios();
+		usuarios.setNombre("Andres");
+		usuarios.setApellidos("pendejo");
+		usuarios.setEmail("andres@correo.com");
+		model.addAttribute("usuarios",usuarios);
+		model.addAttribute("titulo","perfilde usuario".concat(usuarios.getNombre()));
+		return"perfil";
+	}
+
+}
