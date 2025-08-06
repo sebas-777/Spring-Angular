@@ -6,6 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './empleado.html',
   styleUrl: './empleado.css'
 })
-export class Empleado {
+export class Empleado { 
+
+  nombre = 'Isabella';
+  apellidos = 'Castro';
+  private edad = 12;
+  colegio =' Inmaculada';
+
+  getedad(){
+    return this.edad;
+  }
+
+  constructor() { }
 
 }
