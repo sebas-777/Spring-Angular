@@ -2,3 +2,10 @@
 <p>El apellido  del Empreado es : {{ apellidos }}</p>
 <p>su edad es : {{ getedad() + 1}}</p>
 <p>Estudia en la institucion : {{ colegio }}</p>
+<p> su padre trabaja en : {{ empresa.value }}</p>
+
+<br>
+En que empresa trabaja sus padre <input type="text" #empresa (keyup)="0">
+<br>
+<br>
+
